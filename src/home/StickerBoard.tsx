@@ -1,0 +1,77 @@
+import { motion } from 'framer-motion';
+import { Check, Flame } from 'lucide-react';
+
+const StickerBoard = () => {
+  return (
+    <section className="py-32 bg-[#050505] relative z-10">
+      <div className="container mx-auto px-6">
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
+            See it in action
+          </h2>
+          <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+            Real proof from real people building real habits.
+          </p>
+        </div>
+
+        {/* Sticker Board */}
+        <div className="relative min-h-[600px] md:min-h-[500px] flex items-center justify-center py-20">
+          {/* Visual 1: The List Card */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20, rotate: -3 }}
+            whileInView={{ opacity: 1, y: 0, rotate: -3 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="relative md:absolute left-1/2 md:left-[10%] top-auto md:top-[10%] -translate-x-1/2 md:translate-x-0 mb-8 md:mb-0 bg-white rounded-2xl p-4 shadow-2xl transform hover:scale-105 transition-transform duration-500 z-10"
+            style={{ rotate: '-3deg' }}
+          >
+            <div className="flex items-center gap-3 mb-3 pb-3 border-b border-zinc-100">
+              <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
+                <Check size={14} className="text-white"/>
+              </div>
+              <span className="font-bold text-zinc-800">Morning Run</span>
+            </div>
+            <div className="flex items-center gap-3 mb-3 pb-3 border-b border-zinc-100 opacity-50">
+              <div className="w-6 h-6 rounded-full border-2 border-zinc-200"></div>
+              <span className="font-bold text-zinc-800">Read 10 Pages</span>
+            </div>
+            <div className="flex items-center gap-3 opacity-50">
+              <div className="w-6 h-6 rounded-full border-2 border-zinc-200"></div>
+              <span className="font-bold text-zinc-800">Cold Plunge</span>
+            </div>
+          </motion.div>
+
+          {/* Visual 2: The Feed Post Card */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20, rotate: 2 }}
+            whileInView={{ opacity: 1, y: 0, rotate: 2 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="relative md:absolute right-auto md:right-[10%] bottom-auto md:bottom-[10%] left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0 bg-white rounded-2xl p-4 shadow-2xl transform hover:translate-y-[-10px] transition-transform duration-500 w-full max-w-[400px] md:w-[400px] z-10"
+            style={{ rotate: '2deg' }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-zinc-200 rounded-full bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80')`}}></div>
+                <div>
+                  <div className="font-bold text-zinc-900 text-sm">William Armstrong</div>
+                  <div className="text-xs text-zinc-500">75 Hard • Day 42</div>
+                </div>
+              </div>
+              <div className="px-2 py-1 bg-zinc-100 rounded text-xs font-bold text-zinc-600">Verified</div>
+            </div>
+            <div className="h-48 bg-zinc-100 rounded-xl w-full bg-cover bg-center relative overflow-hidden group-hover:shadow-inner transition-shadow" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1502904550040-7534597429ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')`}}>
+              <div className="absolute bottom-3 left-3 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-2">
+                <Flame size={12} className="text-orange-500" fill="currentColor" />
+                <span className="text-white text-xs font-bold">42 Day Streak</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default StickerBoard;
+
