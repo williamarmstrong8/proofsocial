@@ -3,7 +3,7 @@ import FeatureCard from './FeatureCard';
 
 const CoreLoop = () => {
   return (
-    <section className="py-32 bg-[#050505] relative z-10">
+    <section data-scroll-section className="py-32 bg-[#050505] relative z-10">
       <div className="container mx-auto px-6">
         <div className="mb-20 max-w-2xl">
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">Build habits that <br/><span className="text-[#3A86FF]">actually stick.</span></h2>

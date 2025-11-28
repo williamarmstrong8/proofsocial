@@ -2,10 +2,9 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden pt-16 md:pt-20 pb-0 bg-[#050505]">
+    <section data-scroll-section className="relative flex items-center justify-center overflow-hidden pt-16 md:pt-20 pb-0 bg-[#050505]">
       {/* Background Gradients */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#3A86FF] opacity-10 blur-[120px] rounded-full pointer-events-none mix-blend-screen"></div>
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-900 opacity-10 blur-[120px] rounded-full pointer-events-none mix-blend-screen"></div>
+      <div data-scroll data-scroll-speed="0.5" className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#3A86FF] opacity-10 blur-[120px] rounded-full pointer-events-none mix-blend-screen"></div>
 
       <div className="container mx-auto px-6">
         <div className="text-center mb-8 z-10 relative">
@@ -43,8 +42,8 @@ const Hero = () => {
               className="w-full h-auto block"
               style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
             />
-            {/* Fade gradient overlay */}
-            <div className="absolute bottom-0 left-[-1px] right-[-1px] h-[60%] bg-gradient-to-t from-[#050505] from-0% via-[#050505] via-40% to-transparent pointer-events-none rounded-b-[2.5rem]"></div>
+            {/* Fade gradient overlay - taller for side cards */}
+            <div className="absolute bottom-0 left-[-1px] right-[-1px] h-full bg-gradient-to-t from-[#050505] from-0% via-[#050505]/70 via-20% via-[#050505]/40 via-40% to-transparent to-65% pointer-events-none rounded-b-[2.5rem]"></div>
           </motion.div>
 
           {/* Center Screen - Main (Homepage-5) */}
@@ -63,8 +62,8 @@ const Hero = () => {
               className="w-full h-auto block"
               style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
             />
-            {/* Fade gradient overlay */}
-            <div className="absolute bottom-0 left-[-1px] right-[-1px] h-[60%] bg-gradient-to-t from-[#050505] from-0% via-[#050505] via-40% to-transparent pointer-events-none rounded-b-[2.5rem]"></div>
+            {/* Fade gradient overlay - perfect for center card */}
+            <div className="absolute bottom-0 left-[-1px] right-[-1px] h-[75%] bg-gradient-to-t from-[#050505] from-0% via-[#050505]/70 via-25% via-[#050505]/40 via-50% to-transparent to-80% pointer-events-none rounded-b-[2.5rem]"></div>
           </motion.div>
 
           {/* Right Screen - Tasks */}
@@ -84,8 +83,8 @@ const Hero = () => {
               className="w-full h-auto block"
               style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
             />
-            {/* Fade gradient overlay */}
-            <div className="absolute bottom-0 left-[-1px] right-[-1px] h-[60%] bg-gradient-to-t from-[#050505] from-0% via-[#050505] via-40% to-transparent pointer-events-none rounded-b-[2.5rem]"></div>
+            {/* Fade gradient overlay - taller for side cards */}
+            <div className="absolute bottom-0 left-[-1px] right-[-1px] h-full bg-gradient-to-t from-[#050505] from-0% via-[#050505]/70 via-20% via-[#050505]/40 via-40% to-transparent to-65% pointer-events-none rounded-b-[2.5rem]"></div>
           </motion.div>
         </div>
       </div>

@@ -2,4 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --nav-opacity: 1;
+  --nav-translate-y: 0px;
+  --problem-grayscale: 0;
+}
+
+/* Utility for centering Locomotive Scroll sticky elements */
+[data-scroll-sticky] {
+  position: relative;
+}
+
+/* Hide default cursor globally, but keep text cursor for inputs */
+* {
+  cursor: none !important;
+}
+
+input,
+textarea,
+select,
+button,
+a {
+  cursor: none !important;
+}
+
+/* Optional: Keep text cursor for inputs if desired */
+/* Uncomment if you want text cursor in inputs */
+/*
+input,
+textarea,
+select {
+  cursor: text !important;
+}
+*/
 

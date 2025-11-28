@@ -6,27 +6,56 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="relative z-50 bg-transparent py-6">
-      <div className="flex justify-between items-center px-6">
-        <div className="flex items-center">
+    <nav 
+      data-scroll-section
+      id="navigation"
+      className="relative z-50 bg-transparent py-6 transition-opacity duration-100"
+      style={{ 
+        opacity: 'var(--nav-opacity, 1)',
+        transform: 'translateY(var(--nav-translate-y, 0px))'
+      }}
+    >
+      <motion.div 
+        className="flex justify-between items-center px-6"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <motion.div 
+          className="flex items-center"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+        >
           <img 
             src="/Proof Logo.png" 
             alt="Proof" 
             className="h-10 w-auto"
           />
-        </div>
+        </motion.div>
 
 
-        <div className="hidden md:flex items-center gap-4">
+        <motion.div 
+          className="hidden md:flex items-center gap-4"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        >
           <button className="bg-[#3A86FF] hover:bg-[#2b6cdb] text-white px-8 py-3 rounded-full text-base font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(58,134,255,0.5)]">
             Join Waitlist
           </button>
-        </div>
+        </motion.div>
 
-        <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+        <motion.button 
+          className="md:hidden text-white" 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+        </motion.button>
+      </motion.div>
 
       {/* Mobile Menu */}
       <motion.div

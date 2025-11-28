@@ -2,7 +2,7 @@ import React from 'react';
 
 const Marquee = () => {
   return (
-    <div className="py-8 bg-[#3A86FF] overflow-hidden flex items-center relative z-20 rotate-1 scale-105">
+    <div data-scroll-section data-scroll data-scroll-speed="0.8" className="py-8 bg-[#3A86FF] overflow-hidden flex items-center relative z-20 rotate-1 scale-105">
       <div className="animate-marquee whitespace-nowrap flex gap-16">
          {Array(10).fill("").map((_, i) => (
            <React.Fragment key={i}>

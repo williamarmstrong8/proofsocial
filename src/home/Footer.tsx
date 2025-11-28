@@ -2,7 +2,7 @@ import { Zap } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-black py-20 border-t border-white/10">
+    <footer data-scroll-section className="bg-black py-20 border-t border-white/10">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">

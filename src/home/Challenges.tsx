@@ -3,7 +3,7 @@ import ChallengeCard from './ChallengeCard';
 
 const Challenges = () => {
   return (
-    <section className="py-24 bg-[#050505] border-t border-white/5 overflow-hidden">
+    <section data-scroll-section className="py-24 bg-[#050505] border-t border-white/5 overflow-hidden">
       <div className="container mx-auto px-6 mb-12 flex justify-between items-end">
         <div>
           <span className="text-[#3A86FF] font-bold tracking-wider uppercase text-sm mb-2 block">Explore Challenges</span>

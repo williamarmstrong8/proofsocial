@@ -1,6 +1,6 @@
 const CTA = () => {
   return (
-    <section className="py-32 container mx-auto px-6 text-center relative">
+    <section data-scroll-section className="py-32 container mx-auto px-6 text-center relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#3A86FF]/5 pointer-events-none"></div>
       <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8">Ready to prove it?</h2>
       <p className="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">Join thousands of others using social accountability to build unstoppable habits.</p>
